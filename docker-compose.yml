@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+  backend:
+    container_name: backend
+    build: .
+    depends_on:
+      - mongodb
+    ports:
+      - 4000:4000
+  frontend:
+    container_name: frontend
+    build: 
+      context: .
+      dockerfile: ./Dockerfile.frontend
+    depends_on:
+      - backend
+    ports:
+      - 5173:5173
+    
