@@ -4,7 +4,6 @@ import LoginPage from "./pages/LoginPage";
 import { AuthProvider } from "./context/AuthContext";
 import TasksPage from "./pages/TasksPage";
 import TaskFormPage from "./pages/TaskFormPage";
-import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
@@ -25,7 +24,6 @@ function App() {
               <Route path="/tasks" element={<TasksPage />}></Route>
               <Route path="/add-task" element={<TaskFormPage />}></Route>
               <Route path="/tasks/:id" element={<TaskFormPage />}></Route>
-              <Route path="profile" element={<ProfilePage />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

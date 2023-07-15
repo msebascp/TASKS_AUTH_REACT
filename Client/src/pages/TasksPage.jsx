@@ -9,7 +9,8 @@ function TasksPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (tasks.length === 0) return <h1>No tasks</h1>;
+  if (tasks.length === 0)
+    return <h1 className="text-center py-10">No tasks</h1>;
 
   return (
     <div className="grid grid-cols-1 gap-2 justify-items-center py-10">
